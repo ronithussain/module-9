@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>responsive</title>
+    <style>
+        .container{
+            display: flex;
+            gap: 15px;
+        }
+        .box{
+            background-color: blueviolet;
+            padding: 10px;
+            border-radius: 10px;
+        }
+        .item{
+            height: 100px;
+            width: 100px;
+            border: 1px solid magenta;
+            background: maroon;
+        }
+        .container-2{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        @media screen and (max-width:576px) {
+            .container{
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam dicta dolores maiores animi harum beatae minima voluptates vel, quis praesentium, itaque velit reprehenderit repudiandae asperiores provident rem quas nihil suscipit iure nulla quibusdam! Inventore quam iure consequuntur corporis dolore officia vel architecto? Ex harum nemo voluptate et. Corporis, nobis.</p>
+        </div>
+        <div class="box">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi magnam dicta dolores maiores animi harum beatae minima voluptates vel, quis praesentium, itaque velit reprehenderit repudiandae asperiores provident rem quas nihil suscipit iure nulla quibusdam! Inventore quam iure consequuntur corporis dolore officia vel architecto? Ex harum nemo voluptate et. Corporis, nobis.</p>
+        </div>
+    </div>
+    <div class="container-2">
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+        <div class="item">Item</div>
+
+    </div>
+</body>
+</html>
