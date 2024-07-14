@@ -1,11 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grid Layout</title>
+    <style>
+        .header,
+        .nav,
+        .main,
+        .sidebar,
+        .advertise,
+        .footer {
+            background-color: bisque;
+            border: 2px solid tomato;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .header {
+            grid-area: header;
+        }
+
+        .nav {
+            grid-area: nav;
+        }
+
+        .main {
+            grid-area: main;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+        }
+
+        .advertise {
+            grid-area: advertise;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        .container {
+            display: grid;
+            gap: 20px;
+            grid-template-areas:
+                "header   header  header  header"
+                "nav      main    main    sidebar"
+                "nav      main    main    advertise"
+                "footer   footer  footer  footer" ;
+        }
+        /* media query small device */
+        @media screen and (max-width:576px){
+            .container{
+                grid-template-areas: 
+                "header"
+                "nav"
+                "main"
+                "sidebar"
+                "advertise"
+                "footer"
+                ;
+            }
+        }
+
+        /* media query medium device */
+        @media screen and (min-width:577px) and (max-width:992px){
+            .container{
+                grid-template-areas: 
+                "header    header   header"
+                "nav       nav      nav"
+                "sidebar   main     main "
+                "advertise footer   footer" ;
+            }
+        }
+    </style>
 </head>
-<body>
+
+<body class="container">
     <h2>Grid Layout</h2>
+    <header class="header">
+        <h3>The header</h3>
+    </header>
+    <nav class="nav">
+        <ul>
+            <li><a href="">nav-1</a></li>
+            <li><a href="">nav-2</a></li>
+            <li><a href="">nav-3</a></li>
+        </ul>
+    </nav>
+    <main class="main">
+        <artical>
+            <h3>main artical 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Corporis sed reiciendis dicta? Corporis dicta
+                ab sequi alias nisi molestiae consequatur. Quidem assumenda cum hic ad deserunt natus totam architecto
+                maxime?
+            </p>
+        </artical>
+        <artical>
+            <h3>main artical 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, optio unde, recusandae inventore
+                aliquid ullam nemo beatae sunt fuga laudantium tempore consequuntur velit sequi. Voluptatibus incidunt
+                id soluta quaerat illum.
+            </p>
+        </artical>
+    </main>
+    
+        <div class="sidebar">
+            <h4>sidebar</h4>
+        </div>
+        <div class="advertise">
+            <h4>advertise</h4>
+        </div>
+    
+    <footer class="footer">
+        <h3>The footer</h3>
+    </footer>
 </body>
+
 </html>
