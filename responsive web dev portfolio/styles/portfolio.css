@@ -63,7 +63,7 @@ nav li a{
 }
 .banner-container{
     max-width: 580px;
-    height: 425px;
+    /* height: 725px; */
 }
 .banner-grettings{
     font-weight: bold;
@@ -77,15 +77,16 @@ nav li a{
     font-size: 85px;
     color:#181818 ;
     width: 490px;
-    line-height: 30px;
+
 }
 .banner-description{
     color: #757575;
     font-size: 20px;
 }
-.left{
-    margin-left:30px;
+.banner-picture{
+    width: 580px;
 }
+
 /*------------ about----------- */
 main{
     max-width: 1150px;
@@ -188,7 +189,7 @@ background: #FFFFFF;
 .footer-container{
     background: #FFF8F3;
     max-width: 1850px;
-    height: 650px;
+    height: 750px;
     /* border: 2px solid red; */
     display: flex;
     gap: 30px;
@@ -217,26 +218,68 @@ background: #FFFFFF;
     color: #474747;
     line-height: 20px;
 }
-/* Responsive web dev portfolio */
-.hide{
-    display: none;
-}
+
 /* Responsive web dev portfolio small device */
 @media screen and (max-width:576px) {
-    .skill-container,.resumi-container,.footer-container,.about-items{
+    nav,
+    nav > ul,
+    .banner,
+    .skill-container,
+    .resumi-container,
+    .footer-container,
+    .about-items{
         flex-direction: column;
+    }
+    .heading{
+        background-image: none;
+    }
+    .banner{
+        margin:10px;
+    }
+    .banner-container{
+        max-width: 250px;
+        /* display: block; */
+    }
+
+    .banner-picture{
+        width: 100%;
+    }
+
+    .about{
+        margin-top: 550px;
+    }
+
+    .about-container{
+        padding: 0 5px;
+    }
+    nav > ul{
+        gap: 20px;
+    }
+    .btn{
+        margin-bottom: 20px;
     }
     .resumi-container{
         padding: 5px;
     }
+
     .footer-container,.about{
         padding: 20px;
+    }
+    .footer-container{
+        height: 850px;
     }
     .footer-column{
         width: 100%;
     }
+
     .footer-container input[type="text"],.footer-container input[type="email"], .footer-container textarea{
         width: calc(100% - 40px);
+        padding: 20px;
     }
 }
-   
+   /* -------------tablet---------- */
+   @media screen and (min-width:576px) and (max-width:992px){
+        .banner{
+            flex-direction: column;
+        }
+   }
